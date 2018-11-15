@@ -12,6 +12,8 @@
 		82D94DBA219E135200D3D3E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82D94DB9219E135200D3D3E1 /* Assets.xcassets */; };
 		82D94DBD219E135200D3D3E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D94DBB219E135200D3D3E1 /* LaunchScreen.storyboard */; };
 		82D94DC0219E135200D3D3E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D94DBF219E135200D3D3E1 /* main.m */; };
+		82D94DCC219E220B00D3D3E1 /* IIIStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D94DCB219E220B00D3D3E1 /* IIIStack.m */; };
+		82D94DCF219E294600D3D3E1 /* IIICalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D94DCE219E294600D3D3E1 /* IIICalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,10 @@
 		82D94DBC219E135200D3D3E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82D94DBE219E135200D3D3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82D94DBF219E135200D3D3E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		82D94DCA219E220B00D3D3E1 /* IIIStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IIIStack.h; sourceTree = "<group>"; };
+		82D94DCB219E220B00D3D3E1 /* IIIStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IIIStack.m; sourceTree = "<group>"; };
+		82D94DCD219E294600D3D3E1 /* IIICalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IIICalculator.h; sourceTree = "<group>"; };
+		82D94DCE219E294600D3D3E1 /* IIICalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IIICalculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 		82D94DAF219E135200D3D3E1 /* RPNCalculator Objc */ = {
 			isa = PBXGroup;
 			children = (
+				82D94DD0219E294F00D3D3E1 /* Models */,
 				82D94DC8219E13E000D3D3E1 /* View Controllers */,
 				82D94DC7219E13D800D3D3E1 /* Storyboards */,
 				82D94DC6219E13C800D3D3E1 /* Resources */,
@@ -90,6 +97,17 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		82D94DD0219E294F00D3D3E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				82D94DCA219E220B00D3D3E1 /* IIIStack.h */,
+				82D94DCB219E220B00D3D3E1 /* IIIStack.m */,
+				82D94DCD219E294600D3D3E1 /* IIICalculator.h */,
+				82D94DCE219E294600D3D3E1 /* IIICalculator.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,6 +134,7 @@
 		82D94DA5219E135200D3D3E1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = III;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
@@ -160,8 +179,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D94DCC219E220B00D3D3E1 /* IIIStack.m in Sources */,
 				82D94DC0219E135200D3D3E1 /* main.m in Sources */,
 				82D94DB2219E135200D3D3E1 /* AppDelegate.m in Sources */,
+				82D94DCF219E294600D3D3E1 /* IIICalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
