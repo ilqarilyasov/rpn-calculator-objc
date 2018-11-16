@@ -17,6 +17,15 @@
 
 @implementation IIICalculator
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _stack = [[IIIStack alloc] init];
+    }
+    return self;
+}
+
 - (void)pushNumber:(double)value
 {
     [self.stack pushValue:value];
@@ -45,6 +54,8 @@
             break;
     }
 }
+
+#pragma mark TODO
 
 - (void)clear
 {

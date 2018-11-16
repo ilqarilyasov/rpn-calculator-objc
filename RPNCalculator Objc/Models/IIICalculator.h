@@ -26,7 +26,6 @@ typedef NS_ENUM(NSInteger, Operator)
 - (void)applyOperator:(Operator)operatorX;
 - (void)clear;
 
-
 @end
 
 NS_ASSUME_NONNULL_END

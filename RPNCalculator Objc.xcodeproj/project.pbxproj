@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8298AF51219E3A79006A48E2 /* IIIDigitAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8298AF50219E3A79006A48E2 /* IIIDigitAccumulator.m */; };
+		8298AF54219E3C2A006A48E2 /* IIIRPNCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8298AF53219E3C2A006A48E2 /* IIIRPNCalculatorViewController.m */; };
 		82D94DB2219E135200D3D3E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D94DB1219E135200D3D3E1 /* AppDelegate.m */; };
 		82D94DB8219E135200D3D3E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D94DB6219E135200D3D3E1 /* Main.storyboard */; };
 		82D94DBA219E135200D3D3E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82D94DB9219E135200D3D3E1 /* Assets.xcassets */; };
@@ -17,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8298AF4F219E3A79006A48E2 /* IIIDigitAccumulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IIIDigitAccumulator.h; sourceTree = "<group>"; };
+		8298AF50219E3A79006A48E2 /* IIIDigitAccumulator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IIIDigitAccumulator.m; sourceTree = "<group>"; };
+		8298AF52219E3C2A006A48E2 /* IIIRPNCalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IIIRPNCalculatorViewController.h; sourceTree = "<group>"; };
+		8298AF53219E3C2A006A48E2 /* IIIRPNCalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IIIRPNCalculatorViewController.m; sourceTree = "<group>"; };
 		82D94DAD219E135200D3D3E1 /* RPNCalculator Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RPNCalculator Objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D94DB0219E135200D3D3E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		82D94DB1219E135200D3D3E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -93,6 +99,8 @@
 		82D94DC8219E13E000D3D3E1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8298AF52219E3C2A006A48E2 /* IIIRPNCalculatorViewController.h */,
+				8298AF53219E3C2A006A48E2 /* IIIRPNCalculatorViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -104,6 +112,8 @@
 				82D94DCB219E220B00D3D3E1 /* IIIStack.m */,
 				82D94DCD219E294600D3D3E1 /* IIICalculator.h */,
 				82D94DCE219E294600D3D3E1 /* IIICalculator.m */,
+				8298AF4F219E3A79006A48E2 /* IIIDigitAccumulator.h */,
+				8298AF50219E3A79006A48E2 /* IIIDigitAccumulator.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,7 +191,9 @@
 			files = (
 				82D94DCC219E220B00D3D3E1 /* IIIStack.m in Sources */,
 				82D94DC0219E135200D3D3E1 /* main.m in Sources */,
+				8298AF54219E3C2A006A48E2 /* IIIRPNCalculatorViewController.m in Sources */,
 				82D94DB2219E135200D3D3E1 /* AppDelegate.m in Sources */,
+				8298AF51219E3A79006A48E2 /* IIIDigitAccumulator.m in Sources */,
 				82D94DCF219E294600D3D3E1 /* IIICalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
