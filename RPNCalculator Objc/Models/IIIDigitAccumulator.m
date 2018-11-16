@@ -37,16 +37,18 @@
 
 - (void)clear
 {
-    [self.internalDigits removeAllObjects];
+    self.internalDigits = [NSMutableArray new];
 }
 
-- (double)digitValue
+- (NSString *)digitValue
 {
     NSString *decimalPoint = @".";
     if ([self.internalDigits containsObject:decimalPoint]) {
-        return [decimalPoint doubleValue];
+        NSString *decimalValue = [self.internalDigits componentsJoinedByString:@""];
+        return decimalValue;
     } else {
-        return [self.internalDigits.lastObject doubleValue];
+        NSNumber *number = self.internalDigits.lastObject;
+        return [number stringValue];
     }
 }
 

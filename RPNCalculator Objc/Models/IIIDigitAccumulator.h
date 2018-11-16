@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface IIIDigitAccumulator : NSObject
 
-@property (nonatomic, readonly) double digitValue;
+@property (nonatomic, readonly) NSString *digitValue;
 
 - (void)addDigitWithNumericValue:(NSNumber *)digit;
 - (void)addDecimalPoint;

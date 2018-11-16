@@ -49,45 +49,63 @@
 {
     NSNumber *number = @([sender tag]);
     [self.digitAccumulator addDigitWithNumericValue:number];
-    [self updateViews];
+    [self updateViewsAfterNumbers];
 }
 
 - (IBAction)pointButtonTapped:(id)sender
 {
     [self.digitAccumulator addDecimalPoint];
-    [self updateViews];
+    [self updateViewsAfterNumbers];
 }
 
 - (IBAction)divideButtonTapped:(id)sender
 {
     [self.calculator applyOperator:OperatorDivide];
+    [self updateViewsAfterOperators];
+    [self.calculator clear];
 }
 
 - (IBAction)multiplyButtonTapped:(id)sender
 {
     [self.calculator applyOperator:OperatorMultiply];
+    [self updateViewsAfterOperators];
+    [self.calculator clear];
 }
 
 - (IBAction)subtractButtonTapped:(id)sender
 {
     [self.calculator applyOperator:OperatorSubtract];
+    [self updateViewsAfterOperators];
+    [self.calculator clear];
 }
 
 - (IBAction)addButtonTapped:(id)sender
 {
     [self.calculator applyOperator:OperatorAdd];
+    [self updateViewsAfterOperators];
+    [self.calculator clear];
 }
 
 - (IBAction)returnButtonTapped:(id)sender
 {
-//    NSNumber *number = @(self.calculatorTextField.text);
-//    [self.calculator pushNumber: number];
+    double number = [[self.digitAccumulator digitValue] doubleValue];
+    [self.calculator pushNumber: number];
+    [self.digitAccumulator clear];
+    self.calculatorTextField.text = @"";
 }
 
-- (void)updateViews
+#pragma mark Update Screen
+
+- (void)updateViewsAfterNumbers
 {
-    double number = self.digitAccumulator.digitValue;
-    self.calculatorTextField.text = [NSString stringWithFormat:@"%0.00f", number] ;
+    NSString *number = [self.digitAccumulator digitValue];
+    self.calculatorTextField.text = [NSString stringWithFormat:@"%@", number] ;
+}
+
+- (void)updateViewsAfterOperators
+{
+    NSNumber *number = [NSNumber numberWithDouble:(self.calculator.topValue)];
+    self.calculatorTextField.text = [number stringValue];
 }
 
 #pragma mark Delegate
@@ -97,30 +115,6 @@
     [self.calculator clear];
     [self.digitAccumulator clear];
     return YES;
-}
-
-#pragma mark didSet
-
-- (void)setDigitAccumulator:(IIIDigitAccumulator *)digitAccumulator
-{
-    _digitAccumulator = digitAccumulator;
-    if (self.digitAccumulator.digitValue) {
-        double number = self.digitAccumulator.digitValue;
-        self.calculatorTextField.text = [NSString stringWithFormat:@"%0.00f", number] ;
-    } else {
-        self.calculatorTextField.text = @"";
-    }
-}
-
-- (void)setCalculator:(IIICalculator *)calculator
-{
-    _calculator = calculator;
-    if (self.calculator.topValue) {
-        double number = self.calculator.topValue;
-        self.calculatorTextField.text = [NSString stringWithFormat:@"%0.00f", number] ;
-    } else {
-        self.calculatorTextField.text = @"";
-    }
 }
 
 @end

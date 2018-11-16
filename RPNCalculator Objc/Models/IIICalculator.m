@@ -59,7 +59,7 @@
 
 - (void)clear
 {
-    self.stack = nil;
+    self.stack = [IIIStack new];
 }
 
 - (double)topValue
